@@ -99,6 +99,7 @@ export class TalkingComponent implements OnInit, OnDestroy {
     public uploadFile(): void {
         if (this.fileInput) {
             const fileBrowser = this.fileInput.nativeElement;
+           
             if (fileBrowser.files && fileBrowser.files[0]) {
                 const formData = new FormData();
                 formData.append('image', fileBrowser.files[0]);
@@ -109,8 +110,26 @@ export class TalkingComponent implements OnInit, OnDestroy {
                             });
                 });
             }
+            // this.showProgressBar();
         }
     }
+
+    public showProgressBar($scope){
+   
+        var vm=$scope.vm;
+        vm.style='blue';
+        vm.progress=50;
+        vm.text=true;
+        vm.myFunc=function(){ 
+          if(vm.progress>100){
+            vm.progress=100;
+          }
+          if(vm.progress<0){
+            vm.progress=0;
+          }
+        }
+    
+}
 
     public send(): void {
         if (this.content.trim().length === 0) {

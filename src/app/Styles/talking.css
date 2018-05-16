@@ -271,3 +271,28 @@ i {
     margin-top: 15px;
     color: #727272;
 }
+
+.progress{
+    width:400px;
+    border:1px solid #ccc;
+    height: 28px;
+    text-align: center;
+    line-height: 28px;
+    font-weight: bold;
+    color: #fff;
+    overflow: hidden;
+  }
+  .Bar{
+    width:50%;
+    height: 28px;
+    background: #5BC0DE;
+  }
+  .blue{
+    background: #5BC0DE;
+  }
+  /* .red{
+    background: #D9534F;
+  }
+  .green{
+    background: green;
+  } */
